@@ -4,8 +4,8 @@ terraform {
   required_version = ">= 0.11.0"
   backend "s3" {
     encrypt = true
-    bucket = "terraform-remote-state-s3-dev-vpc"
-    dynamodb_table = "terraform-state-lock-dynamodb-dev-vpc"
+    bucket = "terraform-remote-state-s3-test-vpc"
+    dynamodb_table = "terraform-state-lock-dynamodb-test-vpc"
     key = "terraform.tfstate"
     region = "us-east-1"
   }
