@@ -23,7 +23,6 @@ provider "aws" {
 ###########
 # VPC
 ###########
-
 module "vpc" {
   source = "../../tf-modules/vpc"
   env = "${var.env}"
@@ -35,15 +34,12 @@ module "vpc" {
   build_net = ["${var.build_net}"]
   private_net = ["${var.private_net}"]
   public_net = ["${var.public_net}"]
-  #key_name = "${var.key_name}"
-  #bastion_ami = "${var.bastion_ami}"
 }
 
 
 ###########
 # BASTION
 ###########
-
 module "bastion" {
   source = "../../tf-modules/bastion"
   key_name = "${var.key_name}"
